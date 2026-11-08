@@ -1,0 +1,11 @@
+{
+  "task": {
+    "title": "Weekend park signage repair",
+    "criteria": "A volunteer's report is done only if it says they replaced or repaired a broken trail sign and secured its mounting so it will not fall again. A report that only inspects or photographs a sign is not done.",
+    "stipend": "20000000000000000",
+    "max_volunteers": 1,
+    "window": 300
+  },
+  "report": "I replaced the broken trail sign near the north entrance this weekend and tightened the mounting bolts so it will not fall again.",
+  "expected_verdict": "done"
+}

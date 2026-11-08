@@ -1,0 +1,92 @@
+{
+  "contract": "packages/contracts/volunteer.py",
+  "note": "Generated from the contract source and deployments/studionet.json; packages/contracts/tests/test_shape.py fails if either drifts from this file.",
+  "constructor": {},
+  "writes": {
+    "open": {
+      "params": {
+        "title": "str",
+        "criteria": "str",
+        "stipend": "u256",
+        "max_volunteers": "u256",
+        "window": "u256"
+      },
+      "payable": true
+    },
+    "report": {
+      "params": {
+        "task_id": "u256",
+        "text": "str"
+      }
+    },
+    "settle": {
+      "params": {
+        "task_id": "u256"
+      }
+    }
+  },
+  "views": {
+    "count": {
+      "params": {},
+      "returns": "u256"
+    },
+    "held_total": {
+      "params": {},
+      "returns": "u256"
+    },
+    "status": {
+      "params": {
+        "task_id": "u256"
+      },
+      "returns": "str"
+    },
+    "task": {
+      "params": {
+        "task_id": "u256"
+      },
+      "returns": "dict",
+      "fields": [
+        "closed_at",
+        "closes_at",
+        "criteria",
+        "left",
+        "max_volunteers",
+        "opened_at",
+        "org",
+        "paid",
+        "paid_total",
+        "pool",
+        "reports",
+        "returned",
+        "status",
+        "stipend",
+        "title"
+      ],
+      "sampled_from_record": [
+        "tasks",
+        0
+      ]
+    },
+    "reports_of": {
+      "params": {
+        "task_id": "u256"
+      },
+      "returns": "dict",
+      "row_fields": [
+        "at",
+        "id",
+        "paid",
+        "reason_is_leader_supplied",
+        "report",
+        "task",
+        "verdict",
+        "volunteer",
+        "why"
+      ],
+      "sampled_from_record": [
+        "reports",
+        0
+      ]
+    }
+  }
+}

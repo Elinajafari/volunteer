@@ -1,0 +1,30 @@
+{
+  "task": {
+    "title": "Trail cleanup at Riverside Park",
+    "criteria": "A volunteer's report is done only if it says they personally picked up litter along the river trail for at least an hour and put it in the park's bins. Watching others work, walking the trail without picking anything up, or working somewhere other than the river trail is not done.",
+    "stipend": "20000000000000000",
+    "max_volunteers": 3,
+    "window": 900
+  },
+  "reports": {
+    "ann": "I spent just over an hour this morning picking up litter along the river trail between the footbridge and the car park, and put everything in the park's bins near the entrance.",
+    "ben": "I walked along the river trail this afternoon and looked at how much litter there was, but I did not pick any of it up myself.",
+    "cal": "I picked up litter along the river trail for about ninety minutes this afternoon, filled two bags, and left them in the park's bins by the bridge."
+  },
+  "steps": [
+    {"who": "org", "method": "open", "expect": "ok", "step": "task 0: Riverside Park trail cleanup, 3 volunteers at 0.02 GEN"},
+    {"who": "org", "method": "report", "id": 0, "text": "cal", "expect": "refused", "step": "the organisation reports on its own task"},
+    {"who": "ann", "method": "report", "id": 0, "text": "ann", "expect": "ok", "step": "report 0: Ann picks up litter for an hour"},
+    {"who": "ann", "method": "report", "id": 0, "text": "ann", "expect": "refused", "step": "Ann reports a second time"},
+    {"who": "ben", "method": "report", "id": 0, "text": "ben", "expect": "ok", "step": "report 1: Ben only looks, does not pick up"},
+    {"who": "cal", "method": "report", "id": 0, "text": "cal", "expect": "ok", "step": "report 2: Cal picks up litter for ninety minutes"},
+    {"who": "stranger", "method": "settle", "id": 0, "expect": "refused", "step": "a settlement before the window closes"},
+    {"who": "stranger", "method": "report", "id": 0, "text": "cal", "expect": "refused", "step": "a late report after the window closes", "after": ["closes_at", 0]},
+    {"who": "stranger", "method": "settle", "id": 0, "expect": "ok", "step": "task 0 settled: the unused third slot returned"}
+  ],
+  "expected_verdicts": [
+    "done",
+    "not_done",
+    "done"
+  ]
+}

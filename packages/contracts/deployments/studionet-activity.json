@@ -1,0 +1,69 @@
+{
+  "network": "studionet",
+  "contract": "0xC068d7C10Bf232a92546b936409f41AeEAf11cbB",
+  "accounts": {
+    "org": "0x27E8C72A91A0f58Db797DB688a9304536c687064",
+    "volunteer": "0xDBC3Fb642B76Ce0b2715eaeA7b2d457e977b2ABA"
+  },
+  "steps": [
+    {
+      "step": "task 1: a new organisation opens a one-volunteer task",
+      "method": "open",
+      "from": "0x27E8C72A91A0f58Db797DB688a9304536c687064",
+      "tx": "0x0d6bddff158859237bbfc67fdc9137e0c81e10aa9701facd67075d394522f84e",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "report for task 1: a new volunteer reports (expected done)",
+      "method": "report",
+      "from": "0xDBC3Fb642B76Ce0b2715eaeA7b2d457e977b2ABA",
+      "tx": "0x4b7cef5df10468bc5cc15197707e36a4116960ac04430a336ff26b5f752e1059",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "the organisation tries to settle before the window closes",
+      "method": "settle",
+      "from": "0x27E8C72A91A0f58Db797DB688a9304536c687064",
+      "tx": "0xf01c8c1165ef750652a5faeb50ed9e7464501c1040594431073205541dae80b7",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] reports are open until 2026-11-08T21:34:50Z"
+    },
+    {
+      "step": "task 1 settled",
+      "method": "settle",
+      "from": "0x27E8C72A91A0f58Db797DB688a9304536c687064",
+      "tx": "0xc5d98b864329a20ffa39377c873aed35729c0db98a285466be177d118d16f4f8",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "tasks": {
+    "1": {
+      "closed_at": "2026-11-08T21:35:14Z",
+      "closes_at": "2026-11-08T21:34:50Z",
+      "criteria": "A volunteer's report is done only if it says they replaced or repaired a broken trail sign and secured its mounting so it will not fall again. A report that only inspects or photographs a sign is not done.",
+      "left": "0",
+      "max_volunteers": 1,
+      "opened_at": "2026-11-08T21:29:50Z",
+      "org": "0x27E8C72A91A0f58Db797DB688a9304536c687064",
+      "paid": 1,
+      "paid_total": "20000000000000000",
+      "pool": "20000000000000000",
+      "reports": 1,
+      "returned": "0",
+      "status": "closed",
+      "stipend": "20000000000000000",
+      "title": "Weekend park signage repair"
+    }
+  },
+  "balances": {
+    "volunteer_before": "0",
+    "volunteer_after": "20000000000000000"
+  }
+}

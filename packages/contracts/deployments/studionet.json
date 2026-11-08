@@ -1,0 +1,181 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract": "0xC068d7C10Bf232a92546b936409f41AeEAf11cbB",
+  "explorer": "https://explorer-studio.genlayer.com/address/0xC068d7C10Bf232a92546b936409f41AeEAf11cbB",
+  "source_sha256": "50045296fe488f1a7fa1b0891c6f81622297ce80683af190d17ae9944862f3f8",
+  "constructor": {},
+  "deployer": "0x589a3E40167A2Ec54655e4735Fe9EA1B2a329092",
+  "steps": [
+    {
+      "step": "deploy",
+      "method": "deploy",
+      "from": "0x589a3E40167A2Ec54655e4735Fe9EA1B2a329092",
+      "tx": "0x7f2623cfeef769121b84e946c56ba848e8a6305f550b79d5e39c24be2183008e",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": "",
+      "address": "0xC068d7C10Bf232a92546b936409f41AeEAf11cbB"
+    },
+    {
+      "step": "task 0: Riverside Park trail cleanup, 3 volunteers at 0.02 GEN",
+      "method": "open",
+      "from": "0xb7Dcae6ECF06515b7BAd7EB219fCB4995cefFb59",
+      "tx": "0x3e18d4e7cc9caa5019fc857e27e9a0c05dd46f0975c01a3ae59b09fc091784c8",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "the organisation reports on its own task",
+      "method": "report",
+      "from": "0xb7Dcae6ECF06515b7BAd7EB219fCB4995cefFb59",
+      "tx": "0x7f28a7f757005a9f92ab4612d7817b7e4a0df83950099c82529eb60efa26df94",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] the organisation cannot report on its own task"
+    },
+    {
+      "step": "report 0: Ann picks up litter for an hour",
+      "method": "report",
+      "from": "0x5532702D6759996464E8851a014ACf2b2693357F",
+      "tx": "0xcdb56c5b10326c90e6e6de34c30e071bd000489d99a93d4b4eaf93aa4a8a6cc7",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "Ann reports a second time",
+      "method": "report",
+      "from": "0x5532702D6759996464E8851a014ACf2b2693357F",
+      "tx": "0xf97f0b4a07ed7238dce957861d34e4156860f38ca181dcc6b9039ed06a17f1f0",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] a volunteer reports once per task"
+    },
+    {
+      "step": "report 1: Ben only looks, does not pick up",
+      "method": "report",
+      "from": "0x7a026644816E9CB5137f48fBc5733B4997B2dAD7",
+      "tx": "0x926e132bab06c7bb211a865e5b90ef5bc3126e1afd68e3310f6be395fae8a60d",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "report 2: Cal picks up litter for ninety minutes",
+      "method": "report",
+      "from": "0x9d55a1b1C34fB52b9f2F1e4dE288E9843B30a54a",
+      "tx": "0xc7e49185f941d439adeb2ab3b063c18504b0880b9cfbb33a0b14449387c66c92",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "a settlement before the window closes",
+      "method": "settle",
+      "from": "0x88B3553d2040C55Cd7AaA96152BdCC6982ecCE5F",
+      "tx": "0x19fdeb6be1d549bf84402fa2005ad57f5c74ab89de0a75ed9d01eb7eecfac905",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] reports are open until 2026-11-08T21:23:58Z"
+    },
+    {
+      "step": "a late report after the window closes",
+      "method": "report",
+      "from": "0x88B3553d2040C55Cd7AaA96152BdCC6982ecCE5F",
+      "tx": "0xe5b487ff4ef8011ef745a931fdeeb16a912da3f013849ccae97ec35975796a1a",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] reports closed at 2026-11-08T21:23:58Z; a late report is never judged"
+    },
+    {
+      "step": "task 0 settled: the unused third slot returned",
+      "method": "settle",
+      "from": "0x88B3553d2040C55Cd7AaA96152BdCC6982ecCE5F",
+      "tx": "0xb2c46905a76cb2989bcd6cc80b0e6ef21fbde73d882d9996ab7fcfc487a0f05e",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "accounts": {
+    "deployer": "0x589a3E40167A2Ec54655e4735Fe9EA1B2a329092",
+    "org": "0xb7Dcae6ECF06515b7BAd7EB219fCB4995cefFb59",
+    "ann": "0x5532702D6759996464E8851a014ACf2b2693357F",
+    "ben": "0x7a026644816E9CB5137f48fBc5733B4997B2dAD7",
+    "cal": "0x9d55a1b1C34fB52b9f2F1e4dE288E9843B30a54a",
+    "stranger": "0x88B3553d2040C55Cd7AaA96152BdCC6982ecCE5F"
+  },
+  "tasks": [
+    {
+      "closed_at": "2026-11-08T21:24:36Z",
+      "closes_at": "2026-11-08T21:23:58Z",
+      "criteria": "A volunteer's report is done only if it says they personally picked up litter along the river trail for at least an hour and put it in the park's bins. Watching others work, walking the trail without picking anything up, or working somewhere other than the river trail is not done.",
+      "left": "0",
+      "max_volunteers": 3,
+      "opened_at": "2026-11-08T21:08:58Z",
+      "org": "0xb7Dcae6ECF06515b7BAd7EB219fCB4995cefFb59",
+      "paid": 2,
+      "paid_total": "40000000000000000",
+      "pool": "60000000000000000",
+      "reports": 3,
+      "returned": "20000000000000000",
+      "status": "closed",
+      "stipend": "20000000000000000",
+      "title": "Trail cleanup at Riverside Park"
+    }
+  ],
+  "reports": [
+    {
+      "at": "2026-11-08T21:09:23.698495Z",
+      "id": 0,
+      "paid": "20000000000000000",
+      "reason_is_leader_supplied": true,
+      "report": "I spent just over an hour this morning picking up litter along the river trail between the footbridge and the car park, and put everything in the park's bins near the entrance.",
+      "task": 0,
+      "verdict": "done",
+      "volunteer": "0x5532702D6759996464E8851a014ACf2b2693357F",
+      "why": "Report says they personally picked up litter on the river trail for just over an hour and put it in the park's bins."
+    },
+    {
+      "at": "2026-11-08T21:10:00.759312Z",
+      "id": 1,
+      "paid": "0",
+      "reason_is_leader_supplied": true,
+      "report": "I walked along the river trail this afternoon and looked at how much litter there was, but I did not pick any of it up myself.",
+      "task": 0,
+      "verdict": "not_done",
+      "volunteer": "0x7a026644816E9CB5137f48fBc5733B4997B2dAD7",
+      "why": "They only walked and observed litter on the river trail; they explicitly say they did not pick it up or put it in bins."
+    },
+    {
+      "at": "2026-11-08T21:10:27.499976Z",
+      "id": 2,
+      "paid": "20000000000000000",
+      "reason_is_leader_supplied": true,
+      "report": "I picked up litter along the river trail for about ninety minutes this afternoon, filled two bags, and left them in the park's bins by the bridge.",
+      "task": 0,
+      "verdict": "done",
+      "volunteer": "0x9d55a1b1C34fB52b9f2F1e4dE288E9843B30a54a",
+      "why": "They personally picked up litter on the river trail for about ninety minutes and put the filled bags in the park’s bins."
+    }
+  ],
+  "balances": {
+    "org_before": "940000000000000000",
+    "org_after": "960000000000000000",
+    "ann_before": "0",
+    "ann_after": "20000000000000000",
+    "ben_before": "0",
+    "ben_after": "0",
+    "cal_before": "0",
+    "cal_after": "20000000000000000"
+  },
+  "owed": {
+    "org": "20000000000000000",
+    "ann": "20000000000000000",
+    "ben": "0",
+    "cal": "20000000000000000"
+  },
+  "held_after": "0"
+}

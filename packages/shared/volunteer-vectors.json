@@ -1,0 +1,145 @@
+{
+  "clean_text": [
+    {
+      "raw": "  picked\tup\n litter ",
+      "clean": "picked up litter"
+    },
+    {
+      "raw": "bell\u0007x",
+      "clean": "bell x"
+    },
+    {
+      "raw": "cafe   ok",
+      "clean": "cafe ok"
+    },
+    {
+      "raw": "ab",
+      "clean": "ab"
+    },
+    {
+      "raw": "",
+      "clean": ""
+    }
+  ],
+  "normalise_choice": [
+    {
+      "raw": "0",
+      "n": 2,
+      "choice": "0"
+    },
+    {
+      "raw": "1",
+      "n": 2,
+      "choice": "1"
+    },
+    {
+      "raw": " [0] ",
+      "n": 2,
+      "choice": "0"
+    },
+    {
+      "raw": "#1",
+      "n": 2,
+      "choice": "1"
+    },
+    {
+      "raw": "(0)",
+      "n": 2,
+      "choice": "0"
+    },
+    {
+      "raw": "",
+      "n": 2,
+      "choice": ""
+    },
+    {
+      "raw": "2",
+      "n": 2,
+      "choice": ""
+    },
+    {
+      "raw": "-1",
+      "n": 2,
+      "choice": ""
+    },
+    {
+      "raw": "one",
+      "n": 2,
+      "choice": ""
+    }
+  ],
+  "option_of": [
+    {
+      "choice": "0",
+      "order": [
+        "done",
+        "not_done"
+      ],
+      "option": "done"
+    },
+    {
+      "choice": "1",
+      "order": [
+        "done",
+        "not_done"
+      ],
+      "option": "not_done"
+    },
+    {
+      "choice": "",
+      "order": [
+        "done",
+        "not_done"
+      ],
+      "option": ""
+    },
+    {
+      "choice": "0",
+      "order": [
+        "not_done",
+        "done"
+      ],
+      "option": "not_done"
+    }
+  ],
+  "fold": [
+    {
+      "forward": "done",
+      "reverse": "done",
+      "folded": "done"
+    },
+    {
+      "forward": "not_done",
+      "reverse": "not_done",
+      "folded": "not_done"
+    },
+    {
+      "forward": "done",
+      "reverse": "not_done",
+      "folded": "not_done"
+    },
+    {
+      "forward": "",
+      "reverse": "done",
+      "folded": ""
+    }
+  ],
+  "verdict_sound": [
+    {
+      "verdict": "done",
+      "sound": true
+    },
+    {
+      "verdict": "not_done",
+      "sound": true
+    },
+    {
+      "verdict": "",
+      "sound": false
+    },
+    {
+      "verdict": "maybe",
+      "sound": false
+    }
+  ]
+}
